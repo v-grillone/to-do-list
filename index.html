@@ -39,22 +39,27 @@
             </form>
         </div>
         <div class="reminders-container">
-            <h3>Tasks</h3>
-            <div class="tasks">
-                <input type="text" value="Laundry" readonly>
-                <button><i class="fa-solid fa-trash-can"></i></button>
+            <h3>REMINDERS</h3>
+            <div class="tasks" id="tasks">
+                <h2>Today</h2>
+                <div class="task">
+                    <input type="text" value="Laundry" maxlength="40" readonly>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+                <div class="task">
+                    <input type="text" value="Workout" maxlength="40" readonly>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
             </div>
-
-            <!-- <div class="reminders-today">
-                <h3>Today</h3>
-            </div>
-            <div class="reminders-upcoming">
-                <h3>Upcoming</h3>
-            </div> -->
         </div>
     </div>   
     <script defer src="task-prompt.js"></script> 
     <script defer src="exit-task-prompt.js"></script> 
     <script defer src="task-add.js"></script> 
+    <script defer src="task-delete.js"></script>
 </body>
 </html>

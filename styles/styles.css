@@ -88,7 +88,7 @@ body {
     padding: 50px;
     border-radius: 10px;
     border: 2px solid var(--onyx);
-    background-color: var(--yellow);
+    background-color: var(--ivory);
 }
 
 .fa-x{
@@ -112,4 +112,49 @@ body {
 
 .task-add-input{
     width: 100%;
+}
+
+.reminders-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.reminders-container h3{
+    font-size: 2.5rem;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.task button{
+    border: none;
+    background-color: var(--white);
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.task button:hover{
+    cursor: pointer;
+}
+
+.task input{
+    width: 200px;
+}
+
+.fa-trash-can{
+    padding: 0;
+    margin: 0;
 }
