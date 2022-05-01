@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/ae8eed7f0f.js" crossorigin="anonymous"></script>
+    <title>Remindly</title>
+</head>
+<body>
+    <div class="content-container">
+        <div class="banner-container">
+            <h1 class="logo">Remindly</h1>
+            <i class="fa-solid fa-plus" id="task-prompt-btn"></i>
+        </div>
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item">UPCOMING</li>
+                <li class="menu-item">TODAY</li>
+                <li class="menu-item">GROUP
+                    <ul class="group-menu">
+                        <li class="group-menu-item">Gym</li>
+                        <li class="group-menu-item">School</li>
+                        <li class="group-menu-item">Coding</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="task-add-container" id="task-add-container">
+            <i class="fa-solid fa-x" id="exit-task-prompt"></i>
+            <h3>Enter a reminder.</h3>
+            <form>
+                <input type="text" class="task-add-input" id="task-add-input">
+                <button type="submit" class="task-add-btn" id="task-add-btn">Add</button>
+            </form>
+        </div>
+        <div class="reminders-container">
+            <h3>Tasks</h3>
+            <div class="tasks">
+                <input type="text" value="Laundry" readonly>
+                <button><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+
+            <!-- <div class="reminders-today">
+                <h3>Today</h3>
+            </div>
+            <div class="reminders-upcoming">
+                <h3>Upcoming</h3>
+            </div> -->
+        </div>
+    </div>   
+    <script defer src="task-prompt.js"></script> 
+    <script defer src="exit-task-prompt.js"></script> 
+    <script defer src="task-add.js"></script> 
+</body>
+</html>
