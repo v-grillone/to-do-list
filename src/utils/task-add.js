@@ -29,13 +29,13 @@ let taskAdd = function(){
 
 
         // to be removed after webkit initialize
-        deleteBtn = document.querySelectorAll('.fa-trash-can');
+        let deleteBtn = document.querySelectorAll('.fa-trash-can');
         deleteBtn.forEach(element => {
             element.addEventListener('click', () => {
                 let task = element.parentElement.parentElement;
                 task.remove()
-                })
-            });
+            })      
+        });
         })
 }
 
