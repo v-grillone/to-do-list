@@ -18,10 +18,10 @@
         </div>
         <div class="menu-container">
             <ul class="menu">
-                <li class="menu-item">UPCOMING</li>
-                <li class="menu-item">TODAY</li>
-                <li class="menu-item">GROUP
-                    <ul class="group-menu">
+                <li class="menu-item" id="upcoming-menu">UPCOMING</li>
+                <li class="menu-item" id="today-menu">TODAY</li>
+                <li><div class="menu-item" id="groups-dropdown">GROUPS<i class="fa-solid fa-chevron-down groups-arrow"></i></div>
+                    <ul class="group-menu" id="group-menu">
                         <li class="group-menu-item">Gym</li>
                         <li class="group-menu-item">School</li>
                         <li class="group-menu-item">Coding</li>
@@ -33,22 +33,43 @@
             <i class="fa-solid fa-x" id="exit-task-prompt"></i>
             <h3>Enter a reminder.</h3>
             <form>
-                <input type="text" class="task-add-input" id="task-add-input">
+                <div class="task-add-content">
+                    <input type="text" class="task-add-input" id="task-add-input" placeholder="Task">
+                    <input type="text" class="task-add-group" id="task-add-group" placeholder="Group">
+                    <input type="date" class="task-add-date" id="task-add-date">
+                </div>
                 <button type="submit" class="task-add-btn" id="task-add-btn">Add</button>
             </form>
         </div>
         <div class="reminders-container">
             <h3>REMINDERS</h3>
+            <h2 id="section-title">Upcoming</h2>
+            <div class="task-titles">
+                <p>TASK</p>
+                <p>GROUP</p>
+                <p>DATE</p>
+            </div>
             <div class="tasks" id="tasks">
-                <h2>Today</h2>
                 <div class="task">
-                    <input type="text" value="Laundry" maxlength="40" readonly>
+                    <input type="text" value="Homework" maxlength="40" readonly>
+                    <input type="text" value="School" maxlength="40" readonly>
+                    <input type="date" value="2022-05-20" readonly>
                     <button>
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </div>
                 <div class="task">
                     <input type="text" value="Workout" maxlength="40" readonly>
+                    <input type="text" value="Gym" maxlength="40" readonly>
+                    <input type="date" value="2022-05-18" readonly>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+                <div class="task">
+                    <input type="text" value="Build list app" maxlength="40" readonly>
+                    <input type="text" value="Coding" maxlength="40" readonly>
+                    <input type="date" value="2022-05-20" readonly>
                     <button>
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
