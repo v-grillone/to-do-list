@@ -18,13 +18,13 @@
         </div>
         <div class="menu-container">
             <ul class="menu">
-                <li class="menu-item" id="upcoming-menu">UPCOMING</li>
-                <li class="menu-item" id="today-menu">TODAY</li>
+                <li class="menu-item group-menu-item" id="upcoming-menu" data-group="Upcoming">UPCOMING</li>
+                <li class="menu-item group-menu-item" id="today-menu" data-group="Today">TODAY</li>
                 <li><div class="menu-item" id="groups-dropdown">GROUPS<i class="fa-solid fa-chevron-down groups-arrow"></i></div>
                     <ul class="group-menu" id="group-menu">
-                        <li class="group-menu-item">Gym</li>
-                        <li class="group-menu-item">School</li>
-                        <li class="group-menu-item">Coding</li>
+                        <li class="group-menu-item" data-group="Gym">Gym</li>
+                        <li class="group-menu-item" data-group="School">School</li>
+                        <li class="group-menu-item" data-group="Coding">Coding</li>
                     </ul>
                 </li>
             </ul>
@@ -50,7 +50,7 @@
                 <p>DATE</p>
             </div>
             <div class="tasks" id="tasks">
-                <div class="task">
+                <div class="task School Upcoming">
                     <input type="text" value="Homework" maxlength="40" readonly>
                     <input type="text" value="School" maxlength="40" readonly>
                     <input type="date" value="2022-05-20" readonly>
@@ -58,7 +58,7 @@
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </div>
-                <div class="task">
+                <div class="task Gym Upcoming">
                     <input type="text" value="Workout" maxlength="40" readonly>
                     <input type="text" value="Gym" maxlength="40" readonly>
                     <input type="date" value="2022-05-18" readonly>
@@ -66,7 +66,7 @@
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </div>
-                <div class="task">
+                <div class="task Coding Upcoming">
                     <input type="text" value="Build list app" maxlength="40" readonly>
                     <input type="text" value="Coding" maxlength="40" readonly>
                     <input type="date" value="2022-05-20" readonly>

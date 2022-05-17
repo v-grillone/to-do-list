@@ -13,6 +13,6 @@ taskAdd();
 taskDelete();
 groupsDropdown();
 menuActive();
-groupSort('Gym');
+groupSort();
 
 

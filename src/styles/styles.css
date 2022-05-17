@@ -70,8 +70,13 @@ ul .group-menu{
     display: none;
 }
 
-.group-menu-item{
+ul li{
     margin: 15px 0px;
+    list-style-type: none;
+}
+
+ul li:hover{
+    cursor: pointer;
 }
 
 .fa-plus {

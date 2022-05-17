@@ -1,13 +1,19 @@
-let groupSort = function(filter){
-    let allTasks = document.querySelectorAll('.task');
-    let filteredTasks = []
-    allTasks.forEach(task => {
-        // console.log(task.childNodes[3].value);
-        if(task.childNodes[3].value == filter){
-            filteredTasks.push(task);
-        }
+let groupSort = function(){
+    const groupBtns = document.querySelectorAll('.group-menu-item');
+    const tasks = document.querySelectorAll('.task');
+    groupBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const filter = e.target.dataset.group;
+            console.log(filter); 
+            tasks.forEach(task => {
+                if(task.classList.contains(filter)){
+                    task.style.display = 'flex';
+                }else{
+                    task.style.display ='none'
+                }
+            })
+        })
     })
-    console.log(filteredTasks);
 }
 
 export default groupSort;

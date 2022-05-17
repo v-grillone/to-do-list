@@ -1,3 +1,5 @@
+import groupSort from './group-sort.js';
+
 let taskAdd = function(){
     let addBtn = document.getElementById('task-add-btn');
     addBtn.addEventListener('click', (e) => {
@@ -16,7 +18,10 @@ let taskAdd = function(){
         // Task
         let tasksDiv = document.getElementById('tasks');
         let taskDiv = document.createElement('div');
-        taskDiv.classList.add('task')
+        taskDiv.classList.add('task');
+        taskDiv.classList.add(groupValue);
+        // Adding upcoming od today to task class*** functionality coming
+        taskDiv.classList.add('Upcoming');
         // task
         let taskInput = document.createElement('input');
         taskInput.type = 'text';
@@ -62,9 +67,12 @@ let taskAdd = function(){
         let groupsUl = document.getElementById('group-menu');
         let groupLi = document.createElement('li');
         groupLi.classList.add('group-menu-item');
+        groupLi.dataset.group = groupValue;
         groupLi.innerText = groupValue;
         groupsUl.appendChild(groupLi);
-        })
+
+        groupSort();
+    })
 }
 
 export default taskAdd;
