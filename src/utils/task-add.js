@@ -1,4 +1,6 @@
 import groupSort from './group-sort.js';
+import taskDelete from './task-delete.js';
+import menuActive from './menu-active.js';
 
 let taskAdd = function(){
     let addBtn = document.getElementById('task-add-btn');
@@ -41,11 +43,11 @@ let taskAdd = function(){
         dateFormInput.readOnly = 'true';
         // button
         let taskBtn = document.createElement('button');
-        let taskDelete = document.createElement('i');
-        taskDelete.classList.add('fa-solid');
-        taskDelete.classList.add('fa-trash-can');
+        let taskDeleteIcon = document.createElement('i');
+        taskDeleteIcon.classList.add('fa-solid');
+        taskDeleteIcon.classList.add('fa-trash-can');
         // Appending to the dom
-        taskBtn.appendChild(taskDelete);
+        taskBtn.appendChild(taskDeleteIcon);
         taskDiv.appendChild(taskInput);
         taskDiv.appendChild(groupFormInput);
         taskDiv.appendChild(dateFormInput);
@@ -55,14 +57,6 @@ let taskAdd = function(){
         let addContainer = document.getElementById('task-add-container')
         addContainer.style.display = 'none';
         addInput.value = '';
-        // to be removed after webkit initialize
-        let deleteBtn = document.querySelectorAll('.fa-trash-can');
-        deleteBtn.forEach(element => {
-            element.addEventListener('click', () => {
-                let task = element.parentElement.parentElement;
-                task.remove()
-            })      
-        });
         // Groups adding to menu
         let groupsUl = document.getElementById('group-menu');
         let groupLi = document.createElement('li');
@@ -70,8 +64,10 @@ let taskAdd = function(){
         groupLi.dataset.group = groupValue;
         groupLi.innerText = groupValue;
         groupsUl.appendChild(groupLi);
-
+        // Imported modules
         groupSort();
+        menuActive();
+        taskDelete();
     })
 }
 
