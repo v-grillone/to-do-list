@@ -6,6 +6,7 @@ import taskDelete from './utils/task-delete.js';
 import groupsDropdown from './utils/groups-dropdown.js';
 import menuActive from './utils/menu-active.js';
 import groupSort from './utils/group-sort.js';
+import datesSort from './utils/dates-sort.js';
 
 taskPrompt();
 exitTaskPrompt();
@@ -14,5 +15,5 @@ taskDelete();
 groupsDropdown();
 menuActive();
 groupSort();
-
+datesSort();
 

@@ -1,6 +1,7 @@
 import groupSort from './group-sort.js';
 import taskDelete from './task-delete.js';
 import menuActive from './menu-active.js';
+import datesSort from './dates-sort.js';
 
 let taskAdd = function(){
     let addBtn = document.getElementById('task-add-btn');
@@ -66,6 +67,7 @@ let taskAdd = function(){
         groupsUl.appendChild(groupLi);
         // Imported modules
         groupSort();
+        datesSort();
         menuActive();
         taskDelete();
     })

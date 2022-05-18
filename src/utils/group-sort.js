@@ -4,16 +4,15 @@ let groupSort = function(){
     groupBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const filter = e.target.dataset.group;
-            console.log(filter); 
             tasks.forEach(task => {
                 if(task.classList.contains(filter)){
                     task.style.display = 'flex';
                 }else{
                     task.style.display ='none'
                 }
-            })
-        })
-    })
+            });
+        });
+    });
 }
 
 export default groupSort;
