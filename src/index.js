@@ -7,7 +7,9 @@ import groupsDropdown from './utils/groups-dropdown.js';
 import menuActive from './utils/menu-active.js';
 import groupSort from './utils/group-sort.js';
 import datesSort from './utils/dates-sort.js';
+import {tasksStorageReload} from './utils/tasks-storage-local.js';
 
+tasksStorageReload();
 taskPrompt();
 exitTaskPrompt();
 taskAdd();
@@ -16,4 +18,6 @@ groupsDropdown();
 menuActive();
 groupSort();
 datesSort();
+
+
 

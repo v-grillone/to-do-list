@@ -1,7 +1,8 @@
 import groupSort from './group-sort.js';
 import taskDelete from './task-delete.js';
-import menuActive from './menu-active.js';
 import datesSort from './dates-sort.js';
+import menuActive from './menu-active.js';
+import {tasksStorage} from './tasks-storage-local.js'
 
 let taskAdd = function(){
     let addBtn = document.getElementById('task-add-btn');
@@ -58,6 +59,23 @@ let taskAdd = function(){
         let addContainer = document.getElementById('task-add-container')
         addContainer.style.display = 'none';
         addInput.value = '';
+        // Refreshing page to upcomong
+        let tasks = document.querySelectorAll('.task');
+        tasks.forEach(task=>{
+            if(task.classList.contains('Upcoming')){
+                task.style.display = 'flex';
+            }else{
+                task.style.display = 'none';
+            }
+        });
+        let groupItems = document.querySelectorAll('.group-menu-item');
+        groupItems.forEach(item => {
+            item.style.backgroundColor = '';
+            item.style.color = 'var(--onyx)';
+        });
+        const upcomingMenu = document.getElementById('upcoming-menu');
+        upcomingMenu.style.backgroundColor = 'var(--olive)';
+        upcomingMenu.style.color = 'var(--white)';
         // Groups adding to menu
         let groupsUl = document.getElementById('group-menu');
         let groupLi = document.createElement('li');
@@ -68,8 +86,9 @@ let taskAdd = function(){
         // Imported modules
         groupSort();
         datesSort();
-        menuActive();
         taskDelete();
+        menuActive();
+        tasksStorage();
     })
 }
 
